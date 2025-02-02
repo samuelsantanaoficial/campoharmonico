@@ -1,0 +1,31 @@
+body {
+    font-size: 18px; /* Tamanho maior para mobile */
+    padding: 10px;
+}
+
+select, button {
+    font-size: 16px;
+    padding: 8px;
+    margin: 4px 0;
+    width: 100%; /* Ocupa toda a largura */
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 100%;
+    overflow-x: auto; /* Permite rolagem horizontal */
+    display: block; /* Necessário para overflow */
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 12px; /* Mais espaço */
+    text-align: left;
+    font-size: 16px; /* Tamanho legível */
+    min-width: 120px; /* Evita células muito estreitas */
+}
+#tableContainer {
+max-width: 100%;
+overflow-x: auto;
+}

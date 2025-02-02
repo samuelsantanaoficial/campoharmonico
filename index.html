@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de campo harmônico</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Manifest e ícone -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon-192x192.png">
+
+    <!-- Registro do Service Worker -->
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+            .then(registration => {
+            console.log('ServiceWorker registrado com sucesso!');
+            });
+        });
+    }
+    </script>
+</head>
+<body>
+    <select id="noteSelect">
+        <option>C</option>
+        <option>D</option>
+        <option>E</option>
+        <option>F</option>
+        <option>G</option>
+        <option>A</option>
+        <option>B</option>
+    </select>
+
+    <select id="accidentalSelect">
+        <option value="♭">♭ Bemol</option>
+        <option value="">♮ Natural</option>
+        <option value="♯">♯ Sustenido</option>
+    </select>
+
+    <button onclick="generateTable()">Gerar Tabela</button>
+
+    <div id="tableContainer"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
