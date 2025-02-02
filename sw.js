@@ -1,14 +1,13 @@
-const CACHE_NAME = 'gch-25.01.02';
+const CACHE_NAME = 'harmonico-v2';
 const FILES_TO_CACHE = [
-'/',
-'/index.html',
-'/styles.css',
-'/scripts.js',
-'/icon-192x192.png',
-'/icon-512x512.png'
+    '/',
+    '/index.html',
+    '/styles.css',
+    '/scripts.js',
+    '/icon-192.png',
+    '/icon-512.png'
 ];
 
-// Instalação: armazena arquivos em cache
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME)
@@ -16,7 +15,6 @@ self.addEventListener('install', (event) => {
     );
 });
 
-// Busca recursos do cache quando offline
 self.addEventListener('fetch', (event) => {
     event.respondWith(
         caches.match(event.request)
