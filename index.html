@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de campo harmônico</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
@@ -28,38 +28,43 @@
     </script>
 </head>
 <body>
-    <h1>Gerador de campo harmônico</h1>
+    <main class="container text-center">
+        <h1>Gerador de campo harmônico</h1>
 
-    <select id="noteSelect">
-        <option>C</option>
-        <option>D</option>
-        <option>E</option>
-        <option>F</option>
-        <option>G</option>
-        <option>A</option>
-        <option>B</option>
-    </select>
+        <section class="container row row-gap-3">
+            <select class="form-select" id="escalaSelect">
+                <option value="C♭">C♭</option>
+                <option value="G♭">G♭</option>
+                <option value="D♭">D♭</option>
+                <option value="A♭">A♭</option>
+                <option value="E♭">E♭</option>
+                <option value="B♭">B♭</option>
+                <option value="F" >F </option>
+                <option value="C" selected>C </option>
+                <option value="G" >G </option>
+                <option value="D" >D </option>
+                <option value="A" >A </option>
+                <option value="E" >E </option>
+                <option value="B" >B </option>
+                <option value="F♯">F♯</option>
+                <option value="C♯">C♯</option>
+            </select>
 
-    <select id="accidentalSelect">
-        <option value="♭">♭ Bemol</option>
-        <option value="" selected>♮ Natural</option>
-        <option value="♯">♯ Sustenido</option>
-    </select>
+            <button class="btn btn-primary" onclick="gerarTabela()">Gerar Campo harmônico</button>
+        </section>
 
-    <button onclick="generateTable()">Gerar campo harmônico</button>
+        <section class="container text-start row-gap-3">
+            <div class="table row" id="tabelaContainer"></div>
+        </section>
+    </main>
 
-    <div id="tableContainer"></div>
-
-    <footer style="text-align: center; padding: 20px; background-color: #f0f0f0; margin-top: 40px;">
-    <p>
-        Criado por <strong>Samuel Santana</strong>
-        <a href="https://github.com/samuelsantanaoficial/gerador-de-campo-harmonico" target="_blank" rel="noopener noreferrer">Repositório no GitHub</a>
-    </p>
-    <p>
-        Recursos visuais por <a href="https://br.freepik.com/" target="_blank" rel="noopener noreferrer">Freepik</a>
-    </p>
+    <footer class="container text-center">
+        <p>Criado por <strong>Samuel Santana</strong></p>
+        <p><a href="https://github.com/samuelsantanaoficial/gerador-de-campo-harmonico" target="_blank" rel="noopener noreferrer">Repositório no GitHub</a></p>
+        <p>Recursos visuais por <a href="https://br.freepik.com/" target="_blank" rel="noopener noreferrer">Freepik</a></p>
     </footer>
 
     <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

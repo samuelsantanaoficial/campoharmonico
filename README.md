@@ -4,7 +4,7 @@
 ![GitHub stars](https://img.shields.io/github/stars/samuelsantanaoficial/gerador-de-campo-harmonico?style=for-the-badge)
 ![GitHub license](https://img.shields.io/github/license/samuelsantanaoficial/gerador-de-campo-harmonico?style=for-the-badge)
 
-O **Gerador de Campo Harmônico** é uma aplicação web que permite músicos e estudantes de música gerarem tabelas de campos harmônicos paralelos de forma rápida e prática. Com uma interface simples e intuitiva, você pode escolher o tom e visualizar os acordes correspondentes em diferentes escalas (Maior, Menor Natural, Menor Harmônico e Menor Melódico).
+O **Gerador de Campo Harmônico** é uma aplicação web que permite músicos e estudantes de música gerarem tabelas de campos harmônicos paralelos de forma rápida e prática. Com uma interface simples e intuitiva, você pode escolher o tom e visualizar os acordes correspondentes em diferentes escalas (Maior, Menor Natural).
 
 ---
 
@@ -12,11 +12,9 @@ O **Gerador de Campo Harmônico** é uma aplicação web que permite músicos e 
 
 1. **Acesse o site**: [https://geradordecampoharmonico.netlify.app/](https://geradordecampoharmonico.netlify.app/)
 2. **Escolha o tom**:
-   - Selecione a nota base (ex: C, D, E).
-   - Escolha o acidente (Natural, Bemol ou Sustenido).
-3. **Clique em "Gerar Tabela"**.
-4. **Visualize os campos harmônicos**:
-   - A tabela exibirá os acordes para as escalas Maior, Menor Natural, Menor Harmônico e Menor Melódico.
+3. **Clique em "Gerar Campo Harmônico"**.
+4. **Visualize a tabela com os campos harmônicos**:
+   - A tabela exibirá os acordes para as escalas Maior, e Menor Natural.
 
 ---
 

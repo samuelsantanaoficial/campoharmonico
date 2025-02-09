@@ -1,4 +1,4 @@
-const CACHE_NAME = 'harmonico-v4'; // Altere a versão se necessário
+const CACHE_NAME = '090225'; // Altere a versão se necessário
 const FILES_TO_CACHE = [
     '/',
 '/index.html',
