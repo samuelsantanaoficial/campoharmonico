@@ -25,6 +25,9 @@ O **Gerador de Campo Harmônico** é uma aplicação web que permite músicos e 
 - **![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)**: Lógica para gerar os campos harmônicos.
 - **![PWA](https://img.shields.io/badge/PWA-5A0FC8?style=for-the-badge&logo=pwa&logoColor=white)**: Funciona offline e pode ser instalado no celular.
 - **![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)**: Hospedagem e deploy contínuo.
+- **![Linux Manjaro](https://img.shields.io/badge/Linux_Manjaro-35BF5C?style=for-the-badge&logo=manjaro&logoColor=white)**: Sistema operacional utilizado para desenvolvimento.
+- **![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)**: Framework CSS para design responsivo.
+- **![Kate](https://img.shields.io/badge/Kate-1D99F3?style=for-the-badge&logo=kde&logoColor=white)**: Editor de texto avançado do KDE.
 
 ---
 
@@ -34,9 +37,16 @@ Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) par
 
 ## 👏 Créditos
 
+## 👏 Créditos
+
 - **Desenvolvido por**: [Samuel Santana](https://github.com/samuelsantanaoficial)
 - **Ícones gerados por**: [Favicon Generator](https://realfavicongenerator.net/)
 - **Recursos visuais por**: [Freepik](https://br.freepik.com/)
+- **Hospedagem e deploy por**: [Netlify](https://www.netlify.com/)
+- **Versionamento e colaboração por**: [GitHub](https://github.com/)
+- **Sistema operacional utilizado**: [Manjaro Linux](https://manjaro.org/)
+- **Framework CSS utilizado**: [Bootstrap](https://getbootstrap.com/)
+- **Editor de texto utilizado**: [Kate](https://kate-editor.org/)
 
 ---
 
