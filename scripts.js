@@ -17,75 +17,110 @@ const escalasMaiores = {
 };
 
 const escalasMenores = {
-    'C♭': [ 'B','C♯', 'D', 'E','F♯', 'G', 'A'],
-    'G♭': ['F♯','G♯', 'A', 'B','C♯', 'D', 'E'],
-    'D♭': ['C♯','D♯', 'E','F♯','G♯', 'A', 'B'],
-    'A♭': ['A♭','B♭','C♭','D♭','E♭','F♭','G♭'],
-    'E♭': ['E♭', 'F','G♭','A♭','B♭','C♭','D♭'],
-    'B♭': ['B♭', 'C','D♭','E♭', 'F','G♭','A♭'],
-    'F' : [ 'F', 'G','A♭','B♭', 'C','D♭','E♭'],
-    'C' : [ 'C', 'D','E♭', 'F', 'G','A♭','B♭'],
-    'G' : [ 'G', 'A','B♭', 'C', 'D','E♭', 'F'],
-    'D' : [ 'D', 'E', 'F', 'G', 'A','B♭', 'C'],
-    'A' : [ 'A', 'B', 'C', 'D', 'E', 'F', 'G'],
-    'E' : [ 'E','F♯', 'G', 'A', 'B', 'C', 'D'],
-    'B' : [ 'B','C♯', 'D', 'E','F♯', 'G', 'A'],
-    'F♯': ['F♯','G♯', 'A', 'B','C♯', 'D', 'E'],
-    'C♯': ['C♯','D♯', 'E','F♯','G♯', 'A', 'B'],
+    'C♭': ['C♭', 'D♭', 'E♭♭', 'F♭', 'G♭','A♭♭','B♭♭'],
+    'G♭': ['G♭', 'A♭', 'B♭♭', 'C♭', 'D♭','E♭♭', 'F♭'],
+    'D♭': ['D♭', 'E♭',  'F♭', 'G♭', 'A♭','B♭♭', 'C♭'],
+    'A♭': ['A♭', 'B♭',  'C♭', 'D♭', 'E♭', 'F♭', 'G♭'],
+    'E♭': ['E♭',  'F',  'G♭', 'A♭', 'B♭', 'C♭', 'D♭'],
+    'B♭': ['B♭',  'C',  'D♭', 'E♭',  'F', 'G♭', 'A♭'],
+    'F' : [ 'F',  'G',  'A♭', 'B♭',  'C', 'D♭', 'E♭'],
+    'C' : [ 'C',  'D',  'E♭',  'F',  'G', 'A♭', 'B♭'],
+    'G' : [ 'G',  'A',  'B♭',  'C',  'D', 'E♭',  'F'],
+    'D' : [ 'D',  'E',   'F',  'G',  'A', 'B♭',  'C'],
+    'A' : [ 'A',  'B',   'C',  'D',  'E',  'F',  'G'],
+    'E' : [ 'E', 'F♯',   'G',  'A',  'B',  'C',  'D'],
+    'B' : [ 'B', 'C♯',   'D',  'E', 'F♯',  'G',  'A'],
+    'F♯': ['F♯', 'G♯',   'A',  'B', 'C♯',  'D',  'E'],
+    'C♯': ['C♯', 'D♯',   'E', 'F♯', 'G♯',  'A',  'B']
+};
+
+const escalasHarmonicas = {
+    'C♭': ['C♭', 'D♭', 'E♭♭', 'F♭', 'G♭','A♭♭', 'B♭'],
+    'G♭': ['G♭', 'A♭', 'B♭♭', 'C♭', 'D♭','E♭♭',  'F'],
+    'D♭': ['D♭', 'E♭',  'F♭', 'G♭', 'A♭','B♭♭',  'C'],
+    'A♭': ['A♭', 'B♭',  'C♭', 'D♭', 'E♭', 'F♭',  'G'],
+    'E♭': ['E♭',  'F',  'G♭', 'A♭', 'B♭', 'C♭',  'D'],
+    'B♭': ['B♭',  'C',  'D♭', 'E♭',  'F', 'G♭',  'A'],
+    'F' : [ 'F',  'G',  'A♭', 'B♭',  'C', 'D♭',  'E'],
+    'C' : [ 'C',  'D',  'E♭',  'F',  'G', 'A♭',  'B'],
+    'G' : [ 'G',  'A',  'B♭',  'C',  'D', 'E♭', 'F♯'],
+    'D' : [ 'D',  'E',   'F',  'G',  'A', 'B♭', 'C♯'],
+    'A' : [ 'A',  'B',   'C',  'D',  'E',  'F', 'G♯'],
+    'E' : [ 'E', 'F♯',   'G',  'A',  'B',  'C', 'D♯'],
+    'B' : [ 'B', 'C♯',   'D',  'E', 'F♯',  'G', 'A♯'],
+    'F♯': ['F♯', 'G♯',   'A',  'B', 'C♯',  'D', 'E♯'],
+    'C♯': ['C♯', 'D♯',   'E', 'F♯', 'G♯',  'A', 'B♯']
+};
+
+const escalasMelodicas = {
+    'C♭': ['C♭', 'D♭', 'E♭♭', 'F♭', 'G♭', 'A♭', 'B♭'],
+    'G♭': ['G♭', 'A♭', 'B♭♭', 'C♭', 'D♭', 'E♭',  'F'],
+    'D♭': ['D♭', 'E♭',  'F♭', 'G♭', 'A♭', 'B♭',  'C'],
+    'A♭': ['A♭', 'B♭',  'C♭', 'D♭', 'E♭',  'F',  'G'],
+    'E♭': ['E♭',  'F',  'G♭', 'A♭', 'B♭',  'C',  'D'],
+    'B♭': ['B♭',  'C',  'D♭', 'E♭',  'F',  'G',  'A'],
+    'F' : [ 'F',  'G',  'A♭', 'B♭',  'C',  'D',  'E'],
+    'C' : [ 'C',  'D',  'E♭',  'F',  'G',  'A',  'B'],
+    'G' : [ 'G',  'A',  'B♭',  'C',  'D',  'E', 'F♯'],
+    'D' : [ 'D',  'E',   'F',  'G',  'A',  'B', 'C♯'],
+    'A' : [ 'A',  'B',   'C',  'D',  'E', 'F♯', 'G♯'],
+    'E' : [ 'E', 'F♯',   'G',  'A',  'B', 'C♯', 'D♯'],
+    'B' : [ 'B', 'C♯',   'D',  'E', 'F♯', 'G♯', 'A♯'],
+    'F♯': ['F♯', 'G♯',   'A',  'B', 'C♯', 'D♯', 'E♯'],
+    'C♯': ['C♯', 'D♯',   'E', 'F♯', 'G♯', 'A♯', 'B♯']
 };
 
 const tiposDeAcordes = [
-    { name: 'I',   typeMajor: '7M',   typeMinor: 'm7',   },
-    { name: 'II',  typeMajor: 'm7',   typeMinor: 'm7♭5', },
-    { name: 'III', typeMajor: 'm7',   typeMinor: '7M',   },
-    { name: 'IV',  typeMajor: '7M',   typeMinor: 'm7',   },
-    { name: 'V',   typeMajor: '7',    typeMinor: 'm7',   },
-    { name: 'VI',  typeMajor: 'm7',   typeMinor: '7M',   },
-    { name: 'VII', typeMajor: 'm7♭5', typeMinor: '7',    }
+    { name: 'I',   typeMajor: '7M',   typeMinor: 'm7',   typeHarmonica: 'm7M',  typeMelodica: 'm7M',  },
+    { name: 'II',  typeMajor: 'm7',   typeMinor: 'm7♭5', typeHarmonica: 'm7♭5', typeMelodica: 'm7',   },
+    { name: 'III', typeMajor: 'm7',   typeMinor: '7M',   typeHarmonica: '7M♯5', typeMelodica: '7M♯5', },
+    { name: 'IV',  typeMajor: '7M',   typeMinor: 'm7',   typeHarmonica: 'm7',   typeMelodica: '7',    },
+    { name: 'V',   typeMajor: '7',    typeMinor: 'm7',   typeHarmonica: '7',    typeMelodica: '7',    },
+    { name: 'VI',  typeMajor: 'm7',   typeMinor: '7M',   typeHarmonica: '7M',   typeMelodica: 'm7♭5', },
+    { name: 'VII', typeMajor: 'm7♭5', typeMinor: '7',    typeHarmonica: 'dim7', typeMelodica: 'm7♭5', }
 ];
 
 function gerarTabela() {
     const escalaSelecionada = document.getElementById('escalaSelect').value;
-    const notasDaEscalaMaior = escalasMaiores[escalaSelecionada];
-    const notasDaEscalaMenor = escalasMenores[escalaSelecionada];
-    const tabelaContainer = document.getElementById('tabelaContainer');
+    const notas = {
+        maior: escalasMaiores[escalaSelecionada],
+        menor: escalasMenores[escalaSelecionada],
+        harmonica: escalasHarmonicas[escalaSelecionada],
+        melodica: escalasMelodicas[escalaSelecionada]
+    };
 
-    if (!notasDaEscalaMaior || !notasDaEscalaMenor) {
-        tabelaContainer.innerHTML = "<p>Escala não encontrada.</p>";
+    // Verificação de erros
+    if (!notas.maior || !notas.menor || !notas.harmonica || !notas.melodica) {
+        tabelaContainer.innerHTML = "<p>Escala não encontrada ou incompleta.</p>";
         return;
     }
 
-    // Criar a tabela
+    // Criar tabela
     const tabela = document.createElement('table');
-    const linhaCabecalho = tabela.insertRow();
 
-    // Cabeçalhos da tabela
-    linhaCabecalho.insertCell().textContent = "Grau";
-    linhaCabecalho.insertCell().textContent = "Maior";
-    linhaCabecalho.insertCell().textContent = "Menor";
+    // Cabeçalho com novas colunas
+    const headerRow = tabela.insertRow();
+    ['', 'Maior', 'Menor Natural', 'Menor Harmônica', 'Menor Melódica'].forEach(texto => {
+        headerRow.insertCell().textContent = texto;
+    });
 
-    // Preencher a tabela com os dados
-    for (let i = 0; i < notasDaEscalaMaior.length; i++) {
-        const linha = tabela.insertRow();
-        const grau = tiposDeAcordes[i].name;
-        const typeMajor = tiposDeAcordes[i].typeMajor;
-        const typeMinor = tiposDeAcordes[i].typeMinor;
+    // Preencher linhas
+    for (let i = 0; i < notas.maior.length; i++) {
+        const row = tabela.insertRow();
+        const tipo = tiposDeAcordes[i];
 
-        // Notas das escalas maior e menor
-        const notaMaior = notasDaEscalaMaior[i];
-        const notaMenor = notasDaEscalaMenor[i];
-
-        // Acorde maior e menor
-        const acordeMaior = `${notaMaior}${typeMajor}`;
-        const acordeMenor = `${notaMenor}${typeMinor}`;
-
-        // Inserir células na linha
-        linha.insertCell().textContent = grau;
-        linha.insertCell().textContent = acordeMaior;
-        linha.insertCell().textContent = acordeMenor;
+        // Adicionar células para cada tipo
+        [
+            tipo.name,
+            `${notas.maior[i]}${tipo.typeMajor}`,
+            `${notas.menor[i]}${tipo.typeMinor}`,
+            `${notas.harmonica[i]}${tipo.typeHarmonica}`,
+            `${notas.melodica[i]}${tipo.typeMelodica}`
+        ].forEach((texto, idx) => {
+            row.insertCell().textContent = texto;
+        });
     }
 
-    // Limpar o container e adicionar a tabela
-    tabelaContainer.innerHTML = "";
+    tabelaContainer.innerHTML = '';
     tabelaContainer.appendChild(tabela);
 }
