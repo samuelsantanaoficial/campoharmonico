@@ -36,7 +36,7 @@ Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) par
 
 - **Desenvolvido por**: [Samuel Santana](https://github.com/samuelsantanaoficial)
 - **Ícones gerados por**: [Favicon Generator](https://realfavicongenerator.net/)
-- **Recursos visuais por**: [Freepik](https://br.freepik.com/)
+- **Recursos visuais por**: [Freepik](https://br.freepik.com/) https://br.freepik.com/icone/lupa-musical_16769749#fromView=families&page=1&position=3&uuid=9c55de91-c665-480d-8f2b-9989e8c366a3
 
 ---
 
