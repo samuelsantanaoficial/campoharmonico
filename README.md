@@ -20,13 +20,11 @@ O **Gerador de Campo Harmônico** é uma aplicação web que permite músicos e 
 
 ## 💻 Tecnologias Utilizadas
 
-- **HTML5**: Estrutura da aplicação.
-- **CSS3**: Estilização e layout responsivo.
-- **JavaScript**: Lógica para gerar os campos harmônicos.
-- **PWA (Progressive Web App)**: Funciona offline e pode ser instalado no celular.
-- **Netlify**: Hospedagem e deploy contínuo.
-
-
+- **![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)**: Estrutura da aplicação.
+- **![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)**: Estilização e layout responsivo.
+- **![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)**: Lógica para gerar os campos harmônicos.
+- **![PWA](https://img.shields.io/badge/PWA-5A0FC8?style=for-the-badge&logo=pwa&logoColor=white)**: Funciona offline e pode ser instalado no celular.
+- **![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)**: Hospedagem e deploy contínuo.
 
 ---
 
