@@ -1,4 +1,4 @@
-const CACHE_NAME = '100225'; // Altere a versão se necessário
+const CACHE_NAME = '10-02-25'; // Altere a versão se necessário
 const FILES_TO_CACHE = [
     '/',
 '/index.html',
