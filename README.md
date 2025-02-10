@@ -37,8 +37,6 @@ Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) par
 
 ## 👏 Créditos
 
-## 👏 Créditos
-
 - **Desenvolvido por**: [Samuel Santana](https://github.com/samuelsantanaoficial)
 - **Ícones gerados por**: [Favicon Generator](https://realfavicongenerator.net/)
 - **Recursos visuais por**: [Freepik](https://br.freepik.com/)
