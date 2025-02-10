@@ -1,6 +1,6 @@
 {
     "name": "Gerador de Campo Harmônico",
-    "short_name": "Harmônicos",
+    "short_name": "Campo Harmônico",
     "description": "Gerador de Campo Harmônico",
     "start_url": "/",
     "display": "standalone",
