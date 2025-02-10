@@ -35,12 +35,12 @@ const escalasMenores = {
 };
 
 const tiposDeAcordes = [
-    { name: 'I',   typeMajor: '∆7',   typeMinor: 'm7',   },
+    { name: 'I',   typeMajor: '7M',   typeMinor: 'm7',   },
     { name: 'II',  typeMajor: 'm7',   typeMinor: 'm7♭5', },
-    { name: 'III', typeMajor: 'm7',   typeMinor: '∆7',   },
-    { name: 'IV',  typeMajor: '∆7',   typeMinor: 'm7',   },
+    { name: 'III', typeMajor: 'm7',   typeMinor: '7M',   },
+    { name: 'IV',  typeMajor: '7M',   typeMinor: 'm7',   },
     { name: 'V',   typeMajor: '7',    typeMinor: 'm7',   },
-    { name: 'VI',  typeMajor: 'm7',   typeMinor: '∆7',   },
+    { name: 'VI',  typeMajor: 'm7',   typeMinor: '7M',   },
     { name: 'VII', typeMajor: 'm7♭5', typeMinor: '7',    }
 ];
 
