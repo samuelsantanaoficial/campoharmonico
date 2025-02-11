@@ -78,7 +78,7 @@ const tiposDeAcordes = [
     { name: 'V',   typeMajor: '7',    typeMinor: 'm7',   typeHarmonica: '7',    typeMelodica: '7',    },
     { name: 'VI',  typeMajor: 'm7',   typeMinor: '7M',   typeHarmonica: '7M',   typeMelodica: 'm7♭5', },
     { name: 'VII', typeMajor: 'm7♭5', typeMinor: '7',    typeHarmonica: 'dim7', typeMelodica: 'm7♭5', }
-];
+    ];
 
 function gerarTabela() {
     const escalaSelecionada = document.getElementById('escalaSelect').value;
@@ -91,22 +91,32 @@ function gerarTabela() {
 
     // Verificação de erros
     if (!notas.maior || !notas.menor || !notas.harmonica || !notas.melodica) {
-        tabelaContainer.innerHTML = "<p>Escala não encontrada ou incompleta.</p>";
+        tabelaContainer.innerHTML = "<p class='text-danger'>Escala não encontrada ou incompleta.</p>";
         return;
     }
 
-    // Criar tabela
+    // Criar tabela com classes do Bootstrap
     const tabela = document.createElement('table');
+    tabela.classList.add('table', 'table-striped', 'table-bordered', 'text-start', 'mt-3');
 
-    // Cabeçalho com novas colunas
-    const headerRow = tabela.insertRow();
+    // Cabeçalho com classes do Bootstrap
+    const thead = tabela.createTHead();
+    const headerRow = thead.insertRow();
+    headerRow.classList.add('table');
+
     ['', 'Maior', 'Menor Natural', 'Menor Harmônica', 'Menor Melódica'].forEach(texto => {
-        headerRow.insertCell().textContent = texto;
+        const th = document.createElement('th');
+        th.textContent = texto;
+        th.classList.add('align-middle');
+        headerRow.appendChild(th);
     });
+
+    // Corpo da tabela
+    const tbody = tabela.createTBody();
 
     // Preencher linhas
     for (let i = 0; i < notas.maior.length; i++) {
-        const row = tabela.insertRow();
+        const row = tbody.insertRow();
         const tipo = tiposDeAcordes[i];
 
         // Adicionar células para cada tipo
@@ -116,11 +126,14 @@ function gerarTabela() {
             `${notas.menor[i]}${tipo.typeMinor}`,
             `${notas.harmonica[i]}${tipo.typeHarmonica}`,
             `${notas.melodica[i]}${tipo.typeMelodica}`
-        ].forEach((texto, idx) => {
-            row.insertCell().textContent = texto;
+        ].forEach(texto => {
+            const td = row.insertCell();
+            td.textContent = texto;
+            td.classList.add('align-middle');
         });
     }
 
+    // Limpar e adicionar a nova tabela
     tabelaContainer.innerHTML = '';
     tabelaContainer.appendChild(tabela);
 }
