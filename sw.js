@@ -1,11 +1,11 @@
-const CACHE_NAME = '05-03-25'; // Altere a versão se necessário
+const CACHE_NAME = '27-03-25'; // Altere a versão se necessário
 const FILES_TO_CACHE = [
     '/',
-'index.html',
-'scripts.js',
-'manifest.js',
-'icon-192.png',
-'icon-512.png'
+    'index.html',
+    'scripts.js',
+    'manifest.js',
+    'icon-192.png',
+    'icon-512.png'
 ];
 
 // Instalação: armazena arquivos em cache
