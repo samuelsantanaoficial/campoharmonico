@@ -106,23 +106,23 @@ const aeolian = {
     'C♯': ['C♯', 'D♯',   'E', 'F♯', 'G♯',   'A',   'B']
 };
 
-    const locrian = {
-        'C♭': ['C♭', 'D♭♭', 'E♭♭', 'F♭', 'G♭♭', 'A♭♭', 'B♭♭'],
-        'G♭': ['G♭', 'A♭♭', 'B♭♭', 'C♭', 'D♭♭', 'E♭♭',  'F♭'],
-        'D♭': ['D♭', 'E♭♭',  'F♭', 'G♭', 'A♭♭', 'B♭♭',  'C♭'],
-        'A♭': ['A♭', 'B♭♭',  'C♭', 'D♭', 'E♭♭',  'F♭',  'G♭'],
-        'E♭': ['E♭',  'F♭',  'G♭', 'A♭', 'B♭♭',  'C♭',  'D♭'],
-        'B♭': ['B♭',  'C♭',  'D♭', 'E♭',  'F♭',  'G♭',  'A♭'],
-        'F' : [ 'F',  'G♭',  'A♭', 'B♭',  'C♭',  'D♭',  'E♭'],
-        'C' : [ 'C',  'D♭',  'E♭',  'F',  'G♭',  'A♭',  'B♭'],
-        'G' : [ 'G',  'A♭',  'B♭',  'C',  'D♭',  'E♭',   'F'],
-        'D' : [ 'D',  'E♭',   'F',  'G',  'A♭',  'B♭',   'C'],
-        'A' : [ 'A',  'B♭',   'C',  'D',  'E♭',   'F',   'G'],
-        'E' : [ 'E',   'F',   'G',  'A',  'B♭',   'C',   'D'],
-        'B' : [ 'B',   'C',   'D',  'E',   'F',   'G',   'A'],
-        'F♯': ['F♯',   'G',   'A',  'B',   'C',   'D',   'E'],
-        'C♯': ['C♯',   'D',   'E', 'F♯',   'G',   'A',   'B']
-    };
+const locrian = {
+    'C♭': ['C♭', 'D♭♭', 'E♭♭', 'F♭', 'G♭♭', 'A♭♭', 'B♭♭'],
+    'G♭': ['G♭', 'A♭♭', 'B♭♭', 'C♭', 'D♭♭', 'E♭♭',  'F♭'],
+    'D♭': ['D♭', 'E♭♭',  'F♭', 'G♭', 'A♭♭', 'B♭♭',  'C♭'],
+    'A♭': ['A♭', 'B♭♭',  'C♭', 'D♭', 'E♭♭',  'F♭',  'G♭'],
+    'E♭': ['E♭',  'F♭',  'G♭', 'A♭', 'B♭♭',  'C♭',  'D♭'],
+    'B♭': ['B♭',  'C♭',  'D♭', 'E♭',  'F♭',  'G♭',  'A♭'],
+    'F' : [ 'F',  'G♭',  'A♭', 'B♭',  'C♭',  'D♭',  'E♭'],
+    'C' : [ 'C',  'D♭',  'E♭',  'F',  'G♭',  'A♭',  'B♭'],
+    'G' : [ 'G',  'A♭',  'B♭',  'C',  'D♭',  'E♭',   'F'],
+    'D' : [ 'D',  'E♭',   'F',  'G',  'A♭',  'B♭',   'C'],
+    'A' : [ 'A',  'B♭',   'C',  'D',  'E♭',   'F',   'G'],
+    'E' : [ 'E',   'F',   'G',  'A',  'B♭',   'C',   'D'],
+    'B' : [ 'B',   'C',   'D',  'E',   'F',   'G',   'A'],
+    'F♯': ['F♯',   'G',   'A',  'B',   'C',   'D',   'E'],
+    'C♯': ['C♯',   'D',   'E', 'F♯',   'G',   'A',   'B']
+};
 
 const tiposDeAcordes = [
     { name: 'I',   typeIonian: '7M (9 11 13)',     typeDorian: 'm7 (9 11 13)',     typePhrygian: 'm7 (♭9 11 ♭13)',   typeLydian: '7M (9 ♯11 13)',    typeMixolydian: '7 (9 11 13)',      typeAeolian: 'm7 (9 11 ♭13)',    typeLocrian: 'm7♭5 (♭9 11 ♭13)', },
@@ -146,49 +146,51 @@ function gerarTabela() {
         locrian: locrian[escalaSelecionada] || []
     };
 
-    // Verificação de erros: se os dados essenciais estiverem vazios, exibe mensagem
-    if (notas.ionian.length === 0 || notas.aeolian.length === 0) {
-        document.getElementById('tabelaContainer').innerHTML = "<p class='text-danger'>Escala não encontrada ou incompleta.</p>";
+    if (notas.ionian.length === 0) {
+        document.getElementById('tabelaContainer').innerHTML = "<p class='text-danger'>Escala não encontrada.</p>";
         return;
     }
 
-    // Criar tabela com classes do Bootstrap
     const tabela = document.createElement('table');
-    tabela.classList.add('table', 'table-striped', 'table-bordered', 'text-start', 'mt-3');
+    tabela.classList.add('table', 'table-striped', 'table-bordered', 'mt-3');
 
-    // Cabeçalho
+    // Novo cabeçalho (graus I a VII)
     const thead = tabela.createTHead();
     const headerRow = thead.insertRow();
-    ['', 'Jônico', 'Dórico', 'Frígio', 'Lídio', 'Mixolídio', 'Eólio', 'Lócrio'].forEach(texto => {
+    ['', 'Iº', 'IIº', 'IIIº', 'IVº', 'Vº', 'VIº', 'VIIº'].forEach(texto => {
         const th = document.createElement('th');
         th.textContent = texto;
         th.classList.add('align-middle');
         headerRow.appendChild(th);
     });
 
-    // Corpo da tabela
+    // Modos em ordem desejada
+    const modos = [
+        { key: 'ionian', nome: 'Jônico' },
+        { key: 'dorian', nome: 'Dórico' },
+        { key: 'phrygian', nome: 'Frígio' },
+        { key: 'lydian', nome: 'Lídio' },
+        { key: 'mixolydian', nome: 'Mixolídio' },
+        { key: 'aeolian', nome: 'Eólio' },
+        { key: 'locrian', nome: 'Lócrio' }
+    ];
+
     const tbody = tabela.createTBody();
-    for (let i = 0; i < notas.ionian.length; i++) {
+    modos.forEach(modo => {
         const row = tbody.insertRow();
-        const tipo = tiposDeAcordes[i];
+        const celulaModo = row.insertCell();
+        celulaModo.textContent = modo.nome;
+        celulaModo.classList.add('fw-bold');
 
-        const celulas = [
-            tipo.name,
-            `${notas.ionian[i]}${tipo.typeIonian}`,
-            `${notas.dorian[i] || ''}${tipo.typeDorian}`,
-            `${notas.phrygian[i] || ''}${tipo.typePhrygian}`,
-            `${notas.lydian[i] || ''}${tipo.typeLydian}`,
-            `${notas.mixolydian[i] || ''}${tipo.typeMixolydian}`,
-            `${notas.aeolian[i]}${tipo.typeAeolian}`,
-            `${notas.locrian[i] || ''}${tipo.typeLocrian}`
-        ];
-
-        celulas.forEach(texto => {
-            const td = row.insertCell();
-            td.textContent = texto;
-            td.classList.add('align-middle');
-        });
-    }
+        for (let i = 0; i < 7; i++) {
+            const tipo = tiposDeAcordes[i];
+            const nota = notas[modo.key][i] || '';
+            const tipoAcorde = tipo[`type${modo.key.charAt(0).toUpperCase() + modo.key.slice(1)}`];
+            const celula = row.insertCell();
+            celula.textContent = `${nota}${tipoAcorde}`;
+            celula.classList.add('text-start');
+        }
+    });
 
     document.getElementById('tabelaContainer').innerHTML = '';
     document.getElementById('tabelaContainer').appendChild(tabela);
