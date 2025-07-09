@@ -160,14 +160,32 @@ const dorianSharp4 = {
     'C♯': ['C♯', 'D♯',   'E', 'F𝄪', 'G♯', 'A♯',   'B']
 };
 
+const phrygian3M = {
+    'C♭': ['C♭',  'D𝄫',  'E♭', 'F♭', 'G♭',  'A𝄫',  'B𝄫'],
+    'G♭': ['G♭',  'A𝄫',  'B♭', 'C♭', 'D♭',  'E𝄫',  'F♭'],
+    'D♭': ['D♭',  'E𝄫',   'F', 'G♭', 'A♭',  'B𝄫',  'C♭'],
+    'A♭': ['A♭',  'B𝄫',   'C', 'D♭', 'E♭',  'F♭',  'G♭'],
+    'E♭': ['E♭',  'F♭',   'G', 'A♭', 'B♭',  'C♭',  'D♭'],
+    'B♭': ['B♭',  'C♭',   'D', 'E♭',  'F',  'G♭',  'A♭'],
+    'F' : [ 'F',  'G♭',   'A', 'B♭',  'C',  'D♭',  'E♭'],
+    'C' : [ 'C',  'D♭',   'E',  'F',  'G',  'A♭',  'B♭'],
+    'G' : [ 'G',  'A♭',   'B',  'C',  'D',  'E♭',   'F'],
+    'D' : [ 'D',  'E♭',  'F♯',  'G',  'A',  'B♭',   'C'],
+    'A' : [ 'A',  'B♭',  'C♯',  'D',  'E',   'F',   'G'],
+    'E' : [ 'E',   'F',  'G♯',  'A',  'B',   'C',   'D'],
+    'B' : [ 'B',   'C',  'D♯',  'E', 'F♯',   'G',   'A'],
+    'F♯': ['F♯',   'G',  'A♯',  'B', 'C♯',   'D',   'E'],
+    'C♯': ['C♯',   'D',  'E♯', 'F♯', 'G♯',   'A',   'B']
+};
+
 const tiposDeAcordes = [
-    { name: 'I',   typeIonian: '7M (9 11 13)',     typeDorian: 'm7 (9 11 13)',     typePhrygian: 'm7 (♭9 11 ♭13)',   typeLydian: '7M (9 ♯11 13)',    typeMixolydian: '7 (9 11 13)',      typeAeolian: 'm7 (9 11 ♭13)',    typeLocrian: 'm7♭5 (♭9 11 ♭13)', typeIonianSharp5: '7M♯5 (9 11 13)',    typeDorianSharp4: 'm7 (9 ♯11 13)',     },
-    { name: 'II',  typeIonian: 'm7 (9 11 13)',     typeDorian: 'm7 (♭9 11 ♭13)',   typePhrygian: '7M (9 ♯11 13)',    typeLydian: '7 (9 11 13)',      typeMixolydian: 'm7 (9 11 ♭13)',    typeAeolian: 'm7♭5 (♭9 11 ♭13)', typeLocrian: '7M (9 11 13)',     typeIonianSharp5: 'm7 (9 ♯11 13)',     typeDorianSharp4: '7 (♭9 11 ♭13)',     },
-    { name: 'III', typeIonian: 'm7 (♭9 11 ♭13)',   typeDorian: '7M (9 ♯11 13)',    typePhrygian: '7 (9 11 13)',      typeLydian: 'm7 (9 11 ♭13)',    typeMixolydian: 'm7♭5 (♭9 11 ♭13)', typeAeolian: '7M (9 11 13)',     typeLocrian: 'm7 (9 11 13)',     typeIonianSharp5: '7 (♭9 11 ♭13)',     typeDorianSharp4: '7M (♯9 ♯11 13)',    },
-    { name: 'IV',  typeIonian: '7M (9 ♯11 13)',    typeDorian: '7 (9 11 13)',      typePhrygian: 'm7 (9 11 ♭13)',    typeLydian: 'm7♭5 (♭9 11 ♭13)', typeMixolydian: '7M (9 11 13)',     typeAeolian: 'm7 (9 11 13)',     typeLocrian: 'm7 (♭9 11 ♭13)',   typeIonianSharp5: '7M (♯9 ♯11 13)',    typeDorianSharp4: 'dim7 (♭9 ♭11 ♭13)', },
-    { name: 'V',   typeIonian: '7 (9 11 13)',      typeDorian: 'm7 (9 11 ♭13)',    typePhrygian: 'm7♭5 (♭9 11 ♭13)', typeLydian: '7M (9 11 13)',     typeMixolydian: 'm7 (9 11 13)',     typeAeolian: 'm7 (♭9 11 ♭13)',   typeLocrian: '7M (9 ♯11 13)',    typeIonianSharp5: 'dim7 (♭9 ♭11 ♭13)', typeDorianSharp4: 'm7M (9 11 ♭13)',    },
-    { name: 'VI',  typeIonian: 'm7 (9 11 ♭13)',    typeDorian: 'm7♭5 (♭9 11 ♭13)', typePhrygian: '7M (9 11 13)',     typeLydian: 'm7 (9 11 13)',     typeMixolydian: 'm7 (♭9 11 ♭13)',   typeAeolian: '7M (9 ♯11 13)',    typeLocrian: '7 (9 11 13)',      typeIonianSharp5: 'm7M (9 11 ♭13)',    typeDorianSharp4: 'm7♭5 (♭9 11 13)',   },
-    { name: 'VII', typeIonian: 'm7♭5 (♭9 11 ♭13)', typeDorian: '7M (9 11 13)',     typePhrygian: 'm7 (9 11 13)',     typeLydian: 'm7 (♭9 11 ♭13)',   typeMixolydian: '7M (9 ♯11 13)',    typeAeolian: '7 (9 11 13)',      typeLocrian: 'm7 (9 11 ♭13)',    typeIonianSharp5: 'm7♭5 (♭9 11 13)',   typeDorianSharp4: '7M♯5 (9 11 13)',    }
+    { name: 'I',   typeIonian: '7M (9 11 13)',     typeDorian: 'm7 (9 11 13)',     typePhrygian: 'm7 (♭9 11 ♭13)',   typeLydian: '7M (9 ♯11 13)',    typeMixolydian: '7 (9 11 13)',      typeAeolian: 'm7 (9 11 ♭13)',    typeLocrian: 'm7♭5 (♭9 11 ♭13)', typeIonianSharp5: '7M♯5 (9 11 13)',    typeDorianSharp4: 'm7 (9 ♯11 13)',     typePhrygian3M: '7 (♭9 11 ♭13)',     },
+    { name: 'II',  typeIonian: 'm7 (9 11 13)',     typeDorian: 'm7 (♭9 11 ♭13)',   typePhrygian: '7M (9 ♯11 13)',    typeLydian: '7 (9 11 13)',      typeMixolydian: 'm7 (9 11 ♭13)',    typeAeolian: 'm7♭5 (♭9 11 ♭13)', typeLocrian: '7M (9 11 13)',     typeIonianSharp5: 'm7 (9 ♯11 13)',     typeDorianSharp4: '7 (♭9 11 ♭13)',     typePhrygian3M: '7M (♯9 ♯11 13)',    },
+    { name: 'III', typeIonian: 'm7 (♭9 11 ♭13)',   typeDorian: '7M (9 ♯11 13)',    typePhrygian: '7 (9 11 13)',      typeLydian: 'm7 (9 11 ♭13)',    typeMixolydian: 'm7♭5 (♭9 11 ♭13)', typeAeolian: '7M (9 11 13)',     typeLocrian: 'm7 (9 11 13)',     typeIonianSharp5: '7 (♭9 11 ♭13)',     typeDorianSharp4: '7M (♯9 ♯11 13)',    typePhrygian3M: 'dim7 (♭9 ♭11 ♭13)', },
+    { name: 'IV',  typeIonian: '7M (9 ♯11 13)',    typeDorian: '7 (9 11 13)',      typePhrygian: 'm7 (9 11 ♭13)',    typeLydian: 'm7♭5 (♭9 11 ♭13)', typeMixolydian: '7M (9 11 13)',     typeAeolian: 'm7 (9 11 13)',     typeLocrian: 'm7 (♭9 11 ♭13)',   typeIonianSharp5: '7M (♯9 ♯11 13)',    typeDorianSharp4: 'dim7 (♭9 ♭11 ♭13)', typePhrygian3M: 'm7M (9 11 ♭13)',    },
+    { name: 'V',   typeIonian: '7 (9 11 13)',      typeDorian: 'm7 (9 11 ♭13)',    typePhrygian: 'm7♭5 (♭9 11 ♭13)', typeLydian: '7M (9 11 13)',     typeMixolydian: 'm7 (9 11 13)',     typeAeolian: 'm7 (♭9 11 ♭13)',   typeLocrian: '7M (9 ♯11 13)',    typeIonianSharp5: 'dim7 (♭9 ♭11 ♭13)', typeDorianSharp4: 'm7M (9 11 ♭13)',    typePhrygian3M: 'm7♭5 (♭9 11 13)',   },
+    { name: 'VI',  typeIonian: 'm7 (9 11 ♭13)',    typeDorian: 'm7♭5 (♭9 11 ♭13)', typePhrygian: '7M (9 11 13)',     typeLydian: 'm7 (9 11 13)',     typeMixolydian: 'm7 (♭9 11 ♭13)',   typeAeolian: '7M (9 ♯11 13)',    typeLocrian: '7 (9 11 13)',      typeIonianSharp5: 'm7M (9 11 ♭13)',    typeDorianSharp4: 'm7♭5 (♭9 11 13)',   typePhrygian3M: '7M♯5 (9 11 13)',    },
+    { name: 'VII', typeIonian: 'm7♭5 (♭9 11 ♭13)', typeDorian: '7M (9 11 13)',     typePhrygian: 'm7 (9 11 13)',     typeLydian: 'm7 (♭9 11 ♭13)',   typeMixolydian: '7M (9 ♯11 13)',    typeAeolian: '7 (9 11 13)',      typeLocrian: 'm7 (9 11 ♭13)',    typeIonianSharp5: 'm7♭5 (♭9 11 13)',   typeDorianSharp4: '7M♯5 (9 11 13)',    typePhrygian3M: 'm7 (9 ♯11 13)',     }
     ];
 
 function gerarTabela() {
@@ -181,7 +199,8 @@ function gerarTabela() {
         aeolian: aeolian[escalaSelecionada] || [],
         locrian: locrian[escalaSelecionada] || [],
         ionianSharp5: ionianSharp5[escalaSelecionada] || [],
-        dorianSharp4: dorianSharp4[escalaSelecionada] || []
+        dorianSharp4: dorianSharp4[escalaSelecionada] || [],
+        phrygian3M: phrygian3M[escalaSelecionada] || []
     };
 
     if (notas.ionian.length === 0) {
@@ -198,7 +217,7 @@ function gerarTabela() {
     // Novo cabeçalho (graus I a VII)
     const thead = tabela.createTHead();
     const headerRow = thead.insertRow();
-    ['', 'Iº', 'IIº', 'IIIº', 'IVº', 'Vº', 'VIº', 'VIIº'].forEach(texto => {
+    ['', 'Iº', 'IIº', 'IIIº', 'IVº', 'Vº dominante', 'VIº', 'VIIº'].forEach(texto => {
         const th = document.createElement('th');
         th.textContent = texto;
         th.classList.add('align-middle');
@@ -215,7 +234,8 @@ function gerarTabela() {
         { key: 'aeolian',      nome: 'Eólio'     },
         { key: 'locrian',      nome: 'Lócrio'    },
         { key: 'ionianSharp5', nome: 'Jônico ♯5' },
-        { key: 'dorianSharp4', nome: 'Dórico ♯4' }
+        { key: 'dorianSharp4', nome: 'Dórico ♯4' },
+        { key: 'phrygian3M',   nome: 'Frígio 3M' }
     ];
 
     const tbody = tabela.createTBody();
