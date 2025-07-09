@@ -40,7 +40,6 @@ Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) par
 - **Recursos visuais por**: [Freepik](https://br.freepik.com/)
 - **Hospedagem e deploy por**: [Netlify](https://www.netlify.com/)
 - **Versionamento e colaboração por**: [GitHub](https://github.com/)
-- **Sistema operacional utilizado**: [Manjaro Linux](https://manjaro.org/)
 - **Framework CSS utilizado**: [Bootstrap](https://getbootstrap.com/)
 - **Editor de texto utilizado**: [Kate](https://kate-editor.org/)
 
