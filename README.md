@@ -1,4 +1,4 @@
-# 🎵 Gerador de Campo Harmônico
+# 🎵 Campo Harmônico
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/samuelsantanaoficial/gerador-de-campo-harmonico?style=for-the-badge)
 ![GitHub stars](https://img.shields.io/github/stars/samuelsantanaoficial/gerador-de-campo-harmonico?style=for-the-badge)
