@@ -10,7 +10,7 @@ Está aplicação web permite que músicos e estudantes de música gerarem tabel
 
 ## 🚀 Como Usar
 
-1. **Acesse o site**: [geradordecampoharmonico](https://geradordecampoharmonico.netlify.app/)
+1. **Acesse o [site:](https://geradordecampoharmonico.netlify.app/)**
 2. **Escolha o tom**:
 3. **Clique em "Gerar Campo Harmônico"**.
 4. **Visualize a tabela com os campos harmônicos**.
