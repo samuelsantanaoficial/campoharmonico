@@ -6,8 +6,6 @@
 
 Está aplicação web permite que músicos e estudantes de música gerarem tabelas de campos harmônicos paralelos de forma rápida e prática. Com uma interface simples e intuitiva, você pode escolher o tom e visualizar os acordes correspondentes em diferentes escalas.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d43683a8-c5a1-45c4-af45-69f86f206983/deploy-status)](https://app.netlify.com/projects/campoharmonico/deploys)
-
 ---
 
 ## 🚀 Como Usar
