@@ -4,7 +4,7 @@
 ![GitHub stars](https://img.shields.io/github/stars/samuelsantanaoficial/gerador-de-campo-harmonico?style=for-the-badge)
 ![GitHub license](https://img.shields.io/github/license/samuelsantanaoficial/gerador-de-campo-harmonico?style=for-the-badge)
 
-O **Gerador de Campo Harmônico** é uma aplicação web que permite músicos e estudantes de música gerarem tabelas de campos harmônicos paralelos de forma rápida e prática. Com uma interface simples e intuitiva, você pode escolher o tom e visualizar os acordes correspondentes em diferentes escalas (Modos Gregos).
+Está aplicação web permite que músicos e estudantes de música gerarem tabelas de campos harmônicos paralelos de forma rápida e prática. Com uma interface simples e intuitiva, você pode escolher o tom e visualizar os acordes correspondentes em diferentes escalas.
 
 ---
 
@@ -13,8 +13,7 @@ O **Gerador de Campo Harmônico** é uma aplicação web que permite músicos e 
 1. **Acesse o site**: [geradordecampoharmonico](https://geradordecampoharmonico.netlify.app/)
 2. **Escolha o tom**:
 3. **Clique em "Gerar Campo Harmônico"**.
-4. **Visualize a tabela com os campos harmônicos**:
-   - A tabela exibirá os acordes para os 7 campos harmônicos paralelos de acordo com os modos gregos.
+4. **Visualize a tabela com os campos harmônicos**.
 
 ---
 
@@ -25,7 +24,6 @@ O **Gerador de Campo Harmônico** é uma aplicação web que permite músicos e 
 - **![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)**: Lógica para gerar os campos harmônicos.
 - **![PWA](https://img.shields.io/badge/PWA-5A0FC8?style=for-the-badge&logo=pwa&logoColor=white)**: Funciona offline e pode ser instalado no celular.
 - **![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)**: Hospedagem e deploy contínuo.
-- **![Linux Manjaro](https://img.shields.io/badge/Linux_Manjaro-35BF5C?style=for-the-badge&logo=manjaro&logoColor=white)**: Sistema operacional utilizado para desenvolvimento.
 - **![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)**: Framework CSS para design responsivo.
 - **![Kate](https://img.shields.io/badge/Kate-1D99F3?style=for-the-badge&logo=kde&logoColor=white)**: Editor de texto avançado do KDE.
 
