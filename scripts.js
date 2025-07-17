@@ -178,6 +178,24 @@ const phrygian3M = {
     'C♯': ['C♯',   'D',  'E♯', 'F♯', 'G♯',   'A',   'B']
 };
 
+const lydianSharp9 = {
+    'C♭': ['C♭', 'D', 'E♭',   'F', 'G♭', 'A♭', 'B♭'],
+    'G♭': ['G♭', 'A', 'B♭',   'C', 'D♭', 'E♭',  'F'],
+    'D♭': ['D♭', 'E',  'F',   'G', 'A♭', 'B♭',  'C'],
+    'A♭': ['A♭', 'B',  'C',   'D', 'E♭',  'F',  'G'],
+    'E♭': ['E♭', 'F♯',  'G',   'A', 'B♭',  'C',  'D'],
+    'B♭': ['B♭', 'C♯',  'D',   'E',  'F',  'G',  'A'],
+    'F' : [ 'F', 'G♯',  'A',   'B',  'C',  'D',  'E'],
+    'C' : [ 'C', 'D♯',  'E',  'F♯',  'G',  'A',  'B'],
+    'G' : [ 'G', 'A♯',  'B',  'C♯',  'D',  'E', 'F♯'],
+    'D' : [ 'D', 'E♯', 'F♯',  'G♯',  'A',  'B', 'C♯'],
+    'A' : [ 'A', 'B♯', 'C♯',  'D♯',  'E', 'F♯', 'G♯'],
+    'E' : [ 'E', 'F𝄪', 'G♯',  'A♯',  'B', 'C♯', 'D♯'],
+    'B' : [ 'B', 'C𝄪', 'D♯',  'E♯', 'F♯', 'G♯', 'A♯'],
+    'F♯': ['F♯', 'G𝄪', 'A♯',  'B♯', 'C♯', 'D♯', 'E♯'],
+    'C♯': ['C♯', 'D𝄪', 'E♯',  'F𝄪', 'G♯', 'A♯', 'B♯']
+};
+
 const tiposDeAcordes = [
     { name: 'I',   typeIonian: '7M (9 11 13)',     typeDorian: 'm7 (9 11 13)',     typePhrygian: 'm7 (♭9 11 ♭13)',   typeLydian: '7M (9 ♯11 13)',    typeMixolydian: '7 (9 11 13)',      typeAeolian: 'm7 (9 11 ♭13)',    typeLocrian: 'm7♭5 (♭9 11 ♭13)', typeIonianSharp5: '7M♯5 (9 11 13)',    typeDorianSharp4: 'm7 (9 ♯11 13)',     typePhrygian3M: '7 (♭9 11 ♭13)',     },
     { name: 'II',  typeIonian: 'm7 (9 11 13)',     typeDorian: 'm7 (♭9 11 ♭13)',   typePhrygian: '7M (9 ♯11 13)',    typeLydian: '7 (9 11 13)',      typeMixolydian: 'm7 (9 11 ♭13)',    typeAeolian: 'm7♭5 (♭9 11 ♭13)', typeLocrian: '7M (9 11 13)',     typeIonianSharp5: 'm7 (9 ♯11 13)',     typeDorianSharp4: '7 (♭9 11 ♭13)',     typePhrygian3M: '7M (♯9 ♯11 13)',    },
