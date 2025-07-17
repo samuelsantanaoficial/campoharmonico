@@ -293,7 +293,7 @@ function gerarTabela() {
     // Novo cabeçalho (graus I a VII)
     const thead = tabela.createTHead();
     const headerRow = thead.insertRow();
-    ['', 'Iº tônica', 'IIº', 'IIIº', 'IVº subdominante', 'Vº dominante', 'VIº', 'VIIº'].forEach(texto => {
+    ['', 'Iº', 'IIº', 'IIIº', 'IVº', 'Vº', 'VIº', 'VIIº'].forEach(texto => {
         const th = document.createElement('th');
         th.textContent = texto;
         th.classList.add('align-middle');
