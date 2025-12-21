@@ -20,17 +20,17 @@ function identificarSufixo(intervalos) {
 
     // --- ACORDES MAIORES (3M) ---
     if (t3 === "3M") {
-        if (q5 === "5P" && s7 === "7M") return "<sup>7M</sup>";
+        if (q5 === "5P" && s7 === "7M") return "<sup>Δ7</sup>";
         if (q5 === "5P" && s7 === "7m") return "<sup>7</sup>";
-        if (q5 === "5A" && s7 === "7M") return "<sup>aug7M</sup>"; 
-        if (q5 === "5A" && s7 === "7m") return "<sup>aug7</sup>";
+        if (q5 === "5A" && s7 === "7M") return "<sup>Δ7(#5)</sup>"; 
+        if (q5 === "5A" && s7 === "7m") return "<sup>7(#5)</sup>";
     }
 
     // --- ACORDES MENORES (3m) ---
     if (t3 === "3m") {
         if (q5 === "5P" && s7 === "7m") return "m<sup>7</sup>";
-        if (q5 === "5P" && s7 === "7M") return "m<sup>7M</sup>"; 
-        if (q5 === "5d" && s7 === "7m") return "m<sup>7b5</sup>";
+        if (q5 === "5P" && s7 === "7M") return "m<sup>Δ7</sup>"; 
+        if (q5 === "5d" && s7 === "7m") return "m<sup>7(b5)</sup>";
         if (q5 === "5d" && s7 === "7d") return "<sup>dim7</sup>";
     }
 
@@ -101,8 +101,8 @@ function gerarCampo() {
         document.getElementById('linhaAcordes').innerHTML += `<td class="text-primary"><strong>${nomeAcordeExibicao}</strong></td>`;
         document.getElementById('linhaExtensoes').innerHTML += `<td class="text-muted small">${extStr}</td>`;
         document.getElementById('linhaNotas').innerHTML += `<td class="fst-italic small">${notasAcorde.join(', ')}</td>`;
-        //document.getElementById('linhaEscala').innerHTML += `<td class="small text-secondary" style="font-size: 0.7rem;">${notasDaEscala.join(' - ')}</td>`;
-        document.getElementById('linhaModos').innerHTML += `<td class="fst-italic small">${modoFinal}</td>`;
+        document.getElementById('linhaEscala').innerHTML += `<td class="small text-secondary" style="font-size: 0.5rem;">${notasDaEscala.join(', ')}</td>`;
+        document.getElementById('linhaModos').innerHTML += `<td class="fst-italic" style="font-size: 0.6rem;">${modoFinal}</td>`;
     }
 }
 
