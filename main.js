@@ -101,7 +101,7 @@ function gerarCampo() {
         document.getElementById('linhaAcordes').innerHTML += `<td class="text-primary"><strong>${nomeAcordeExibicao}</strong></td>`;
         document.getElementById('linhaExtensoes').innerHTML += `<td class="text-muted small">${extStr}</td>`;
         document.getElementById('linhaNotas').innerHTML += `<td class="fst-italic small">${notasAcorde.join(', ')}</td>`;
-        document.getElementById('linhaEscala').innerHTML += `<td class="small text-secondary" style="font-size: 0.7rem;">${notasDaEscala.join(' - ')}</td>`;
+        //document.getElementById('linhaEscala').innerHTML += `<td class="small text-secondary" style="font-size: 0.7rem;">${notasDaEscala.join(' - ')}</td>`;
         document.getElementById('linhaModos').innerHTML += `<td class="fst-italic small">${modoFinal}</td>`;
     }
 }
