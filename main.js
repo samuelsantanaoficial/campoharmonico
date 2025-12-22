@@ -55,8 +55,8 @@ function gerarCampo() {
     const linhaAcordes = document.getElementById('linhaAcordes');
 
     // Reinicia as linhas com o Cabeçalho Lateral (Fixo)
-    //linhaGraus.innerHTML = '<th class="row-header text-secondary">Grau</th>';
-    //linhaAcordes.innerHTML = '<th class="row-header text-secondary">Acorde</th>';
+    linhaGraus.innerHTML = '<th class="row-header text-secondary"></th>';
+    linhaAcordes.innerHTML = '<th class="row-header text-secondary"></th>';
 
     for (let i = 1; i <= 7; i++) {
         const fundamental = deg(i);
