@@ -124,7 +124,13 @@ function gerarCampoGeral() {
 
             let rowHTML = `<tr>`;
             
-            rowHTML += `<td class="small fw-bold bg-light text-secondary">${modoDaLinha.nome}</td>`;
+            rowHTML += `
+                <td class="small fw-bold bg-light text-secondary" 
+                    style="min-width: 120px; cursor: pointer;" 
+                    onclick="copiarLinha(${fIndex}, ${indexDaLinha}, '${modoDaLinha.nome}')" 
+                    title="Clique para copiar os acordes">
+                    ${modoDaLinha.nome}
+                </td>`;
 
             for (let i = 1; i <= 7; i++) {
                 const fundamental = deg(i);
@@ -193,6 +199,33 @@ function abrirModal(id) {
         modalBootstrap = new bootstrap.Modal(document.getElementById('modalDetalhes'));
     }
     modalBootstrap.show();
+}
+
+function copiarLinha(fIndex, indexDaLinha, nomeModo) {
+    const acordesParaCopiar = [];
+    const notaTom = document.getElementById('nota').value;
+
+    // Busca os 7 acordes que foram salvos no DADOS_MODAL para esta linha específica
+    for (let i = 1; i <= 7; i++) {
+        const id = `chord-${fIndex}-${indexDaLinha}-${i}`;
+        if (DADOS_MODAL[id]) {
+            // Remove as tags <sup> e </sup> para copiar apenas o texto (ex: CΔ7 em vez de C<sup>Δ7</sup>)
+            const nomeLimpo = DADOS_MODAL[id].acordeHTML.replace(/<[^>]*>?/gm, '');
+            acordesParaCopiar.push(nomeLimpo);
+        }
+    }
+
+    // Formata a mensagem
+    const mensagem = `*Campo harmônico de ${notaTom} ${nomeModo}*\n${acordesParaCopiar.join(' - ')}`;
+
+    // Copia para a área de transferência
+    navigator.clipboard.writeText(mensagem).then(() => {
+        // Feedback visual simples usando apenas Bootstrap
+        alert(`Copiado para a área de transferência`);
+        // alert(`Copiado para a área de transferência:\n${mensagem}`);
+    }).catch(err => {
+        console.error('Erro ao copiar: ', err);
+    });
 }
 
 window.onload = gerarCampoGeral;
