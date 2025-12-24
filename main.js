@@ -61,8 +61,6 @@ function identificarSufixo(intervalos) {
         if (q5 === "5d" && s7 === "7m") return "m<sup>7(b5)</sup>";
         if (q5 === "5d" && s7 === "7d") return "<sup>dim7</sup>";
     }
-    // Diminuto Harmônico (Tríade diminuta com 7M ou 7bb)
-    // Ultralocrian geralmente gera Diminuto.
     if (t3 === "3m" && q5 === "5d") return "<sup>dim</sup>"; 
 
     if (t3 === "3M" && q5 === "5P") return "";
@@ -78,25 +76,19 @@ function obterCor(nomeAcorde, intervalos) {
     return "success";
 }
 
-// Calcula o grau relativo (Ex: C -> Eb é bIII, C -> E é III)
 function obterGrauRelativo(root, note) {
     const dist = Tonal.Interval.distance(root, note);
-    const step = dist.charAt(0); // 1, 2, 3...
-    const quality = dist.slice(1); // M, m, A, d, P... (Tonal < 3.0 uses different but lets assume modern)
-    
-    // Simplificação robusta baseada em semitons para romanos
     const semitons = Tonal.Interval.semitones(dist);
     const romanos = ["I", "bII", "II", "bIII", "III", "IV", "#IV", "V", "bVI", "VI", "bVII", "VII"];
-    // Mapeamento aproximado para a imagem
     if (semitons === 0) return "I";
     if (semitons === 1) return "bII";
     if (semitons === 2) return "II";
     if (semitons === 3) return "bIII";
     if (semitons === 4) return "III";
     if (semitons === 5) return "IV";
-    if (semitons === 6) return "#IV"; // Ou bV
+    if (semitons === 6) return "#IV"; 
     if (semitons === 7) return "V";
-    if (semitons === 8) return "bVI"; // Ou #V
+    if (semitons === 8) return "bVI"; 
     if (semitons === 9) return "VI";
     if (semitons === 10) return "bVII";
     if (semitons === 11) return "VII";
@@ -108,41 +100,34 @@ function gerarCampoGeral() {
     const notaRaiz = document.getElementById('nota').value;
     const container = document.getElementById('containerPrincipal');
     container.innerHTML = "";
-    DADOS_MODAL = {}; // Limpa cache
+    DADOS_MODAL = {}; 
 
     FAMILIAS.forEach((familia, fIndex) => {
-        // Título da Seção
-        container.innerHTML += `<h5 class="section-title">${familia.titulo}</h5>`;
+        // Título da Seção (Ajustado para classes nativas do Bootstrap)
+        container.innerHTML += `<h5 class="fw-bold mt-4 mb-3 border-start border-primary border-4 ps-2">${familia.titulo}</h5>`;
         
-        // Abre Tabela
         let tabelaHTML = `
             <div class="card shadow-sm border-0 mb-4">
                 <div class="table-responsive">
-                    <table class="table table-bordered mb-0 align-middle">
+                    <table class="table table-hover table-bordered mb-0 align-middle">
                         <tbody>
         `;
 
-        // Loop pelos Modos (Linhas)
         familia.modos.forEach((modoDaLinha, indexDaLinha) => {
             const fullScaleName = `${notaRaiz} ${modoDaLinha.id}`;
             const deg = Tonal.Scale.degrees(fullScaleName);
             
             if (!deg || typeof deg !== 'function') return;
 
-            // Gera as notas "mestra" desta linha (ex: C D Eb F G A Bb)
             const notasMestra = [];
             for(let k=1; k<=7; k++) notasMestra.push(deg(k));
 
             let rowHTML = `<tr>`;
             
-            // Coluna Fixa (Nome da Linha)
-            rowHTML += `<td class="mode-header">${modoDaLinha.nome}</td>`;
+            rowHTML += `<td class="small fw-bold bg-light text-secondary">${modoDaLinha.nome}</td>`;
 
-            // Colunas dos Graus (I a VII)
             for (let i = 1; i <= 7; i++) {
                 const fundamental = deg(i);
-                
-                // 1. Acorde e Intervalos
                 const notasAcorde = [deg(i), deg(i + 2), deg(i + 4), deg(i + 6)];
                 const intervalos = notasAcorde.map(n => Tonal.Interval.distance(fundamental, n));
                 const sufixo = identificarSufixo(intervalos);
@@ -150,40 +135,31 @@ function gerarCampoGeral() {
                 const cor = obterCor(nomeAcordeExibicao, intervalos);
                 const grauRelativo = obterGrauRelativo(notaRaiz, fundamental);
 
-                // 2. CORREÇÃO DA ESCALA (Rotação)
-                // Pega a escala mestra e rotaciona para começar na nota 'i'
                 const parteFim = notasMestra.slice(i - 1);
                 const parteInicio = notasMestra.slice(0, i - 1);
                 const notasEscalaRotacionada = parteFim.concat(parteInicio);
 
-                // 3. CORREÇÃO DO NOME DO MODO (Aritmética Modular)
-                // Se estamos na linha "Dórico" (index 1) e grau II (i=2), queremos o modo (1 + 2 - 1) = 2 (Frígio)
-                // O % 7 garante que depois do VII volta pro I
                 const indexModoRelativo = (indexDaLinha + (i - 1)) % 7;
                 const modoRelativoNome = familia.modos[indexModoRelativo].nome;
 
-                // 4. Extensões (Calculadas sobre a fundamental atual)
                 const extStr = `${formatarExtensao(Tonal.Interval.distance(fundamental, deg(i + 1)))}, ${formatarExtensao(Tonal.Interval.distance(fundamental, deg(i + 3)))}, ${formatarExtensao(Tonal.Interval.distance(fundamental, deg(i + 5)))}`;
 
-                // ID único
                 const uniqueID = `chord-${fIndex}-${indexDaLinha}-${i}`;
                 
-                // Salva dados corretos
                 DADOS_MODAL[uniqueID] = {
                     grau: grauRelativo,
                     acordeHTML: nomeAcordeExibicao,
                     notas: notasAcorde,
                     extensoes: extStr,
-                    escala: notasEscalaRotacionada, // Agora está rotacionada!
-                    modoNome: modoRelativoNome,     // Agora é o nome correto do grau!
+                    escala: notasEscalaRotacionada,
+                    modoNome: modoRelativoNome,
                     cor: cor
                 };
 
-                // Célula
                 rowHTML += `
-                    <td class="chord-cell bg-${cor} bg-opacity-10 text-${cor}" onclick="abrirModal('${uniqueID}')">
-                        <span class="badge-degree text-secondary d-block">${grauRelativo}</span>
-                        <span class="chord-symbol">${nomeAcordeExibicao}</span>
+                    <td class="bg-${cor} bg-opacity-10 text-${cor}" style="cursor: pointer; min-width: 90px;" onclick="abrirModal('${uniqueID}')">
+                        <span class="small text-secondary d-block" style="font-size: 0.65rem;">${grauRelativo}</span>
+                        <strong class="fs-5">${nomeAcordeExibicao}</strong>
                     </td>
                 `;
             }
@@ -206,7 +182,7 @@ function abrirModal(id) {
     
     const titulo = document.getElementById('modalAcorde');
     titulo.innerHTML = dados.acordeHTML;
-    titulo.className = `display-3 fw-bold mb-0 chord-symbol text-${dados.cor}`;
+    titulo.className = `display-3 fw-bold mb-0 text-${dados.cor}`;
 
     document.getElementById('modalModo').innerText = `Modo: ${dados.modoNome}`;
     document.getElementById('modalNotas').innerText = dados.notas.join(' - ');
