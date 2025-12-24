@@ -6,37 +6,37 @@ const FAMILIAS = [
     {
         titulo: "ESCALA MAIOR",
         modos: [
-            { id: "ionian", nome: "JÔNICO" },
-            { id: "dorian", nome: "DÓRICO" },
-            { id: "phrygian", nome: "FRÍGIO" },
-            { id: "lydian", nome: "LÍDIO" },
-            { id: "mixolydian", nome: "MIXOLÍDIO" },
-            { id: "aeolian", nome: "EÓLIO" },
-            { id: "locrian", nome: "LÓCRIO" }
+            { id: "ionian", nome: "Jônico" },
+            { id: "dorian", nome: "Dórico" },
+            { id: "phrygian", nome: "Frígio" },
+            { id: "lydian", nome: "Lídio" },
+            { id: "mixolydian", nome: "Mixolídio" },
+            { id: "aeolian", nome: "Eólio" },
+            { id: "locrian", nome: "Lócrio" }
         ]
     },
     {
         titulo: "MENOR MELÓDICA",
         modos: [
-            { id: "melodic minor", nome: "DÓRICO 7M" }, // Nome usual da Menor Melódica no Jazz
-            { id: "dorian b2", nome: "DÓRICO b9" },
-            { id: "lydian augmented", nome: "LÍDIO #5" },
-            { id: "lydian dominant", nome: "LÍDIO 7" },
-            { id: "mixolydian b6", nome: "MIXOLÍDIO b6" },
-            { id: "locrian #2", nome: "LÓCRIO 9" },
-            { id: "altered", nome: "ALTERADO" }
+            { id: "melodic minor", nome: "Dórico 7M" }, // Nome usual da Menor Melódica no Jazz
+            { id: "dorian b2", nome: "Dórico b9" },
+            { id: "lydian augmented", nome: "Lídio #5" },
+            { id: "lydian dominant", nome: "Lídio 7" },
+            { id: "mixolydian b6", nome: "MixoLídio b6" },
+            { id: "locrian #2", nome: "Lócrio 9" },
+            { id: "altered", nome: "Alterado" }
         ]
     },
     {
         titulo: "MENOR HARMÔNICA",
         modos: [
-            { id: "harmonic minor", nome: "EÓLIO 7M" }, // Nome usual da Menor Harmônica
-            { id: "locrian 6", nome: "LÓCRIO 6" },
-            { id: "ionian #5", nome: "JÔNICO #5" },
-            { id: "dorian #4", nome: "DÓRICO #4" },
-            { id: "phrygian dominant", nome: "FRÍGIO 3M" },
-            { id: "lydian #9", nome: "LÍDIO #9" },
-            { id: "ultralocrian", nome: "DIM. HARM." }
+            { id: "harmonic minor", nome: "Eólio 7M" }, // Nome usual da Menor Harmônica
+            { id: "locrian 6", nome: "Lócrio 6" },
+            { id: "ionian #5", nome: "Jônico #5" },
+            { id: "dorian #4", nome: "Dórico #4" },
+            { id: "phrygian dominant", nome: "Frígio 3M" },
+            { id: "lydian #9", nome: "Lídio #9" },
+            { id: "ultralocrian", nome: "Dim. Harm." }
         ]
     }
 ];
