@@ -1,0 +1,59 @@
+/* Ajustes para Tabela Densa */
+.table-responsive {
+    scrollbar-width: thin;
+}
+
+/* Célula do Acorde */
+.chord-cell {
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 100px;
+    text-align: center;
+}
+
+.chord-cell:hover {
+    transform: scale(1.05);
+    z-index: 2;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chord-symbol {
+    font-size: 1.1rem;
+    display: block;
+}
+
+.chord-symbol sup {
+    font-size: 0.6em;
+    top: -0.4em;
+}
+
+/* Coluna do Nome do Modo (Fixa a esquerda) */
+.mode-header {
+    background-color: #f8f9fa;
+    font-weight: 800;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+    position: sticky;
+    left: 0;
+    z-index: 3;
+    border-right: 2px solid #dee2e6;
+    width: 120px;
+}
+
+.badge-degree {
+    font-size: 0.65rem;
+    opacity: 0.7;
+}
+
+/* Títulos das Seções */
+.section-title {
+    border-left: 5px solid #0d6efd;
+    padding-left: 10px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #495057;
+}

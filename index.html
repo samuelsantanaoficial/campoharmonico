@@ -5,17 +5,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Campo Harmônico</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-light">
 
     <div class="bg-white shadow-sm sticky-top py-3 mb-4 border-bottom">
         <div class="container">
-            <div class="row g-2 justify-content-center">
-                <div class="col-4 col-md-2">
-                    <select id="nota" class="form-select fw-bold" onchange="gerarCampo()">
+            <div class="d-flex align-items-center justify-content-center gap-3">
+                <label for="nota" class="fw-bold text-secondary mb-0">TOM PRINCIPAL:</label>
+                <div style="width: 100px;">
+                    <select id="nota" class="form-select fw-bold border-primary text-primary" onchange="gerarCampoGeral()">
                         <option value="Cb">Cb</option>
                         <option value="Gb">Gb</option>
                         <option value="Db">Db</option>
+                        <option value="C#">C#</option> 
                         <option value="Ab">Ab</option>
                         <option value="Eb">Eb</option>
                         <option value="Bb">Bb</option>
@@ -27,62 +31,23 @@
                         <option value="E">E</option>
                         <option value="B">B</option>
                         <option value="F#">F#</option>
-                        <option value="C#">C#</option> 
-                    </select>
-                </div>
-                
-                <div class="col-8 col-md-6">
-                    <select id="escala" class="form-select" onchange="gerarCampo()">
-                        <optgroup label="Modos Gregos">
-                            <option value="ionian" selected>Jônio (Maior)</option>
-                            <option value="dorian">Dórico</option>
-                            <option value="phrygian">Frígio</option>
-                            <option value="lydian">Lídio</option>
-                            <option value="mixolydian">Mixolídio</option>
-                            <option value="aeolian">Eólio (Menor Natural)</option>
-                            <option value="locrian">Lócrio</option>
-                        </optgroup>
-                        <optgroup label="Menor Melódica">
-                            <option value="melodic minor">Menor Melódica</option>
-                            <option value="dorian b2">Dórico b2</option>
-                            <option value="lydian augmented">Lídio Aumentado</option>
-                            <option value="lydian dominant">Lídio Dominante</option>
-                            <option value="mixolydian b6">Mixolídio b6</option>
-                            <option value="locrian #2">Lócrio #2</option>
-                            <option value="altered">Alterada</option>
-                        </optgroup>
-                        <optgroup label="Menor Harmônica">
-                            <option value="harmonic minor">Menor Harmônica</option>
-                            <option value="phrygian dominant">Frígio Dominante</option>
-                        </optgroup>
+                        <option value="C#">C#</option>
                     </select>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container pb-5">
-        <div class="card shadow-sm border-0">
-            <div class="card-header bg-white py-2">
-                <small class="text-muted fw-bold fst-italic">Toque nos acordes para ver mais detalhes</small>
-            </div>
-            <div class="table-responsive">
-                <table class="table table-bordered align-middle">
-                    <tr id="linhaGraus"></tr>
-                    <tr id="linhaAcordes"></tr>
-                </table>
-            </div>
+    <div class="container pb-5" id="containerPrincipal">
         </div>
-    </div>
 
     <div class="modal fade" id="modalDetalhes" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content border-0 shadow">
-                <div class="modal-header">
-                    <h5 class="modal-title fw-bold text-secondary">Detalhes</h5>
+                <div class="modal-header border-0">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body text-center pb-4">
+                <div class="modal-body text-center pb-4 pt-0">
                     <span id="modalGrau" class="badge rounded-pill fs-6 mb-2 px-3 py-2"></span>
                     <h1 id="modalAcorde" class="display-3 fw-bold mb-0 chord-symbol" style="font-size: 3.5rem;"></h1>
                     <div id="modalModo" class="text-muted fst-italic mb-4"></div>
